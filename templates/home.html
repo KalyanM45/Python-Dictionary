@@ -1,0 +1,32 @@
+<!-- /your_project_folder/templates/dictionary.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Dictionary Lookup</h1>
+    
+    <form method="POST" action="/lookup">
+        <label for="word">Enter your word:</label>
+        <input type="text" id="word" name="word" required>
+        <button type="submit">Lookup</button>
+    </form>
+
+    {% if word and meanings %}
+        <h2>Meanings for {{ word }}:</h2>
+        <ul>
+            {% for meaning in meanings.values() %}
+                {% for m in meaning %}
+                    <li>{{ m }}</li>
+                {% endfor %}
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
