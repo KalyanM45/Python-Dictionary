@@ -1,7 +1,6 @@
 # Flask Word Lookup
 
-This Flask application allows you to look up the meanings of words using the PyDictionary library.
-
+This Flask application provides users with a seamless experience for exploring the meanings of words through the integration of the PyDictionary library. Built on the Flask web framework, the application offers an intuitive interface where users can effortlessly input a word of interest. Leveraging the robust capabilities of PyDictionary, the application retrieves comprehensive information, including definitions, synonyms, and antonyms, presenting a holistic view of the entered word's linguistic context. Whether users are looking to enhance their vocabulary or delve deeper into the intricacies of language, this application serves as a valuable tool for quick and informative word exploration. The clean and user-friendly design, coupled with the power of PyDictionary, makes this Flask application an accessible resource for language enthusiasts and learners alike.
 ## Getting Started
 
 To get started, make sure you have Flask and PyDictionary installed. You can install them using the following commands:
